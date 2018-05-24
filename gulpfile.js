@@ -1,4 +1,4 @@
-// generated on 2018-05-12 using generator-webapp 3.0.1
+// generated on 2018-01-18 using generator-webapp 3.0.1
 const gulp = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const browserSync = require('browser-sync').create();
@@ -8,6 +8,9 @@ const runSequence = require('run-sequence');
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
+
+const AWS = require('aws-sdk');
+const awspublish = require('gulp-awspublish');
 
 let dev = true;
 
@@ -75,6 +78,22 @@ gulp.task('images', () => {
   return gulp.src('app/images/**/*')
     .pipe($.cache($.imagemin()))
     .pipe(gulp.dest('dist/images'));
+});
+
+
+gulp.task('tss', () => {
+  return gulp.src('app/tss/**/*')
+    .pipe(gulp.dest('dist/tss'));
+});
+
+gulp.task('react', () => {
+  return gulp.src('app/react/**/*')
+      .pipe(gulp.dest('dist/react'));
+});
+
+gulp.task('triples', () => {
+  return gulp.src('app/triples/**/*')
+      .pipe(gulp.dest('dist/triples'));
 });
 
 gulp.task('fonts', () => {
@@ -166,7 +185,34 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('publish', function() {
+  // create a new publisher using S3 options
+  // http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#constructor-property
+  var publisher = awspublish.create({
+    region: 'US-West-1',
+    params: {
+      Bucket: 'tdavis.davissoft.com'
+    }
+  }, {
+    cacheFileName: './tmp/cache'
+  });
+
+  // define custom headers
+  var headers = {
+    'Cache-Control': 'max-age=315360000, no-transform, public'
+    // ...
+  };
+  return gulp.src('./dist/**/**')
+      .pipe(publisher.publish())
+      .pipe(publisher.sync())
+      .pipe(publisher.cache())
+      // print upload updates to console
+      .pipe(awspublish.reporter());
+});
+
+
+
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'tss', 'react', 'triples'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
