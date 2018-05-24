@@ -1,0 +1,392 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="tdavis blog">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Just a boy and his blog(s)</title>
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<script src="https://use.fontawesome.com/b90ff24623.js"></script>
+	
+	<!-- Place favicon.ico in the root directory -->
+	
+	<!-- build:css styles/vendor.css -->
+	<!-- bower:css -->
+	<!-- endbower -->
+	<!-- endbuild -->
+	
+	<!-- build:css styles/main.css -->
+	<link rel="stylesheet" href="styles/main.css">
+	<!-- endbuild -->
+	
+	<!-- build:js scripts/vendor/modernizr.js -->
+	<script src="/bower_components/modernizr/modernizr.js"></script>
+	<!-- endbuild -->
+</head>
+<body>
+<!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+	your browser</a> to improve your experience.</p>
+<![endif]-->
+<div class="container">
+	
+	<div class="row">
+		<nav class="navbar nav-header-td animated fadeInDown">
+			<ul class="list-inline pull-right">
+				<li><a href="index.html"><i class="fa fa-home"></i> - </a></li>
+				<li><a href="blog.html"><i class="fa fa-comments-o "></i> - </a></li>
+				
+				<li><a href="portfolio.html"><i class="fa fa-folder"></i> - </a></li>
+				
+				<li><a href="#"><i class="fa fa-address-book"></i> - </a></li>
+			</ul>
+			<p class="header-title">tdavis<span class="half-tone-td">.davissoft.com </span></p>
+		</nav>
+	</div>
+	
+	<div class="row ">
+		<div class="col-sm-6">
+			<h2 class="blog-post-title">Holidays</h2>
+			<p class="lead blog-description">Winter in California</p>
+			<p class="blog-post-meta">Sat Nov 25 2017 <a href="http://tdavis.davissoft.com/about.html">td</a></p>
+			<p>Winter in California is like summer anywhere else, except its probably warmer.</p>
+			<p>I miss NYC for the holidays.</p>
+			<p>I wish you all a wonderful holiday season full of everything that makes the holidays special for you.</p>
+			<p>Much love.</p>
+		
+		</div>
+		<div class="col-sm-6">
+			<img src="images\holiday-2017.png" class=" img-responsive animated fadeIn">
+		
+		</div>
+	</div>
+	<hr>
+	<div class="row ">
+		<div class="col-sm-6">
+			<h2 class="blog-post-title">Summers End </h2>
+			<p class="lead blog-description">Another Summer Gone </p>
+			<p class="blog-post-meta">Tues Sept 5 2017 <a href="http://tdavis.davissoft.com/about.html">td</a></p>
+			<p>Another summer has gone here in lovely southern California, where summer never ends.</p>
+			<p>An update on my various (many) projects:</p>
+			<p>
+			<ul>
+				<li>Emma is coming along, next is an SSL cert and real auth then just moving the 'brain' somewhere safe (if I
+					can find one) short of self-hosting it, which is what I'd prefer.
+				</li>
+				<li>The analysis engine has not progressed since April, I've not had the time for actual coding though I still
+					work the math in my head and the oil model is ferocious. Oil market training also continues.
+				</li>
+				<li>Hurricane data models are conceptually complete, no real reason to work on them right now.</li>
+				<li>Novels are also at a virtual standstill, but those of you that write know that it comes out of you whether
+					you want it or not, so I have some considerable leakage. Packageable.
+				</li>
+				<li>No work on GUT since January, no study no time.</li>
+			</ul>
+			<p>Summer is gone, long live summer!
+			</p>
+		
+		</div>
+		<div class="col-sm-6">
+			<img src="images\summers-gone.jpg" class=" img-responsive animated fadeIn">
+		
+		</div>
+	</div>
+	<hr>
+	<div class="row ">
+		<div class="col-sm-8">
+			<h2 class="blog-post-title">Research</h2>
+			<p class="lead blog-description">Webpack, ECMAScript 6</p>
+			<p class="blog-post-meta">Wed Aug 22 2017 <a href="http://tdavis.davissoft.com/about.html">td</a></p>
+			
+			<p>The past week I've been looking at Webpack and ECMAScript 6.</p>
+			
+			<p>
+				<a href="http://www.ecma-international.org/ecma-262/6.0/">E6 </a>is a great achievement, Javascript is finally
+				in High School and behaves like an young adult language should,
+				sometimes. I've by no means grokked all the corners but its a great improvement, facilitating even better MVC
+				implementations and architectures eventually. I will only work in E6 now if possible, and mostly it is possible
+				given that most recent incarnations of browsers support most features.</p>
+			<p>My only disappointment with E6 is that modules are not currently supported in node, but I can limp along
+				with babel for awhile.</p>
+			<p>
+				<a href="https://webpack.js.org/guides/">Webpack</a> I found interesting, but really just not worth the effort.
+			</p>
+			<p>Things that I like, new classes, defaults, and <em>get</em></p>
+			<pre>
+        <code>
+        class Profile {
+          constructor(userName = '', firstName = '', lastName = '',
+            email1 = '', about = '', password = ''{
+            this.userName = userName;
+            this.firstName = firstName;
+            this.lastname = lastName;
+            this.email1 = email1;
+            this.about = about;
+            this.password = password;
+          }
+          get json() {
+            return JSON.stringify(this);
+          }
+        }
+        </code>
+      </pre>
+		</div>
+		<div class="col-sm-4">
+			<img src="images\research.jpg" class=" img-responsive animated fadeIn">
+		
+		</div>
+	</div>
+	<hr>
+	<div class="row ">
+		<div class="col-sm-8">
+			<h2 class="blog-post-title">Emma Update</h2>
+			<p class="lead blog-description">Busy Work</p>
+			<p class="blog-post-meta">Wed Aug 16 2017 <a href="http://tdavis.davissoft.com/about.html">td</a></p>
+			
+			<p>I work on the UI for <a href="http://emma.bronzelegs.com">Emma</a> when I can, and the site is coming along.
+			</p>
+			
+			<p>Architecture</p>
+			<ul>
+				<li>yo webapp skeleton -- gulp, bower, npm</li>
+				<li>Node, express, mongooose on the back end, ES6</li>
+				<li>Testing with karma and jasmine</li>
+			</ul>
+			<p>
+				The back end is a handful of API's for various functions, for CRUDable data I have added to a
+				node express generic handler and added other controllers, and ancillary routes.</p>
+			<p>All this work just to get to the point where one can create an account, a profile, and start a session
+				and conversation with Emma and her personality modules, and TMM.</p>
+			<p>
+				Next a certificate, moving the FE to https, then hooking up the AI.
+			</p>
+		</div>
+		<div class="col-sm-4">
+			<img src="images\ai-synapse.jpg" class=" img-responsive animated fadeIn">
+		</div>
+	</div>
+	<hr>
+	<div class="row ">
+		<div class="col-sm-6">
+			<h2 class="blog-post-title">Crypto</h2>
+			<p class="lead blog-description">Cryptograms 4.0</p>
+			<p class="blog-post-meta">Mon Jul 17 2017 <a href="http://tdavis.davissoft.com/about.html">td</a></p>
+			
+			<p>I've been working on cryptography my whole life, even 'inventing' my own methods, like we all do.</p>
+			
+			<p>For fun I do the cryptograms in the paper in the morning, simple ciphers with some witty phrase usually.</p>
+			<p>
+				I've written a number of programs to help me do them more quickly, show character distributions, and manage
+				the substitution of characters, i.e. A = Z and allow save and restore of those in process or complete.</p>
+			<p>For me its sort of a 'hello world' exercise, and for fun I'm in the midst of creating yet another
+				program, this time using Angular 4 because honestly I really do like what they have done this time.</p>
+			<p>
+				Watch this space for updates.
+			</p>
+		</div>
+		<div class="col-sm-6">
+			<img src="images\cryptogram.png" class=" img-responsive animated fadeIn">
+		</div>
+	</div>
+	<hr>
+	<div class="row ">
+		<div class="col-sm-8">
+			<h2 class="blog-post-title">Angular 4</h2>
+			<p class="lead blog-description">Angular++++</p>
+			<p class="blog-post-meta">Sat Jul 1 2017 <a href="http://tdavis.davissoft.com/about.html">td</a></p>
+			
+			<p>Angular, never short on update wobbliness, is updated again. <a href="http://bit.ly/2txKuSv">Angular 4.x</a>
+				
+				This version is a paradigm shift to components, which frankly a lot of us had done anyway. They say it's like
+				'a directive with a template'. Whatever, the shift to a component architecture is good, and so far I like it.
+				There is a bit of getting used to the new stuff, but I hope finally this is the last major thing for awhile.</p>
+			<p>Honestly, it's still easier just to write your own stuff.</p>
+			
+			<p>
+				Update 07/12/2011
+			</p>
+			<p>
+				I am very much in favor of the direction Angular 4 is going, its cleaner, simpler, and a joy to write code for.
+			</p>
+		</div>
+		<div class="col-sm-4">
+			<img src="images\angular.svg" class=" img-responsive animated fadeIn">
+		</div>
+	</div>
+	<hr>
+	<div class="row ">
+		<div class="col-sm-8">
+			<h2 class="blog-post-title">Emma</h2>
+			<p class="lead blog-description">Emma is back</p>
+			<p class="blog-post-meta">Wed Jun 8 2017 <a href="http://tdavis.davissoft.com/about.html">td</a></p>
+			
+			<p>I'm resurrecting <a href="http://emma.bronzelegs.com">Emma</a>'s UI on the Web, just for fun and for something
+				new to work on.
+				This version
+				dates from last year, and is partially functional at this point.</p>
+			<p>I still have not decided where/when/how to manage the backend environment.</p>
+			<p>This will be fun</p>
+		
+		</div>
+		<div class="col-sm-4">
+			<img src="images\lg-animated.gif" class=" img-responsive animated fadeIn">
+		</div>
+	</div>
+	
+	<hr>
+	<div class="row ">
+		<div class="col-sm-6">
+			<h2 class="blog-post-title">Not the Higgs Boson</h2>
+			<p class="lead blog-description">Something, maybe</p>
+			<p class="blog-post-meta">Mon May 15 2017 <a href="http://tdavis.davissoft.com/about.html">td</a></p>
+			
+			<p>CERN has fired up the black hole machine again, this time just smashing small pieces, statistically counting
+				the 'dust' and declaring something, anything that fits standard model.</p>
+			<p>I'm not being critical, but it's less than we all think, and more than we can possibly understand.</p>
+			<p>We call that science.</p>
+		
+		</div>
+		<div class="col-sm-6">
+			<img src="images\gammagamma-run.jpg" class=" img-responsive animated fadeIn">
+		</div>
+	</div>
+	<hr>
+	
+	<div class="row ">
+		<div class="col-sm-1"></div>
+		<div class="col-sm-10">
+			<img src="images\gut.jpg" class=" img-responsive animated fadeIn">
+		</div>
+	</div>
+	<div class="row ">
+		<div class="col-sm-12">
+			<h2 class="blog-post-title">Science or Not</h2>
+			<p class="lead blog-description">GUT'is or GU aint</p>
+			<p class="blog-post-meta">Mon Apr 10 2017 <a href="http://tdavis.davissoft.com/about.html">td</a></p>
+			
+			<p>More updates on not much. I've been catching up on reading, and review math while completing Stanfords
+				GUT lecture series, disappointed that there isnt more meaningful math.</p>
+			<p>I'm fairly convinced that although the math seems to work for many things separately in nature, that there is
+				something
+				basic we are missing. Even if super symmetry worked, would it mean anything?</p>
+			<p>Mostly this is brought about by the lack of consistency with CERN empirical results w/r/t the Higgs boson
+				theoretical predictions.</p>
+			<p>Not a big fan of 'fine tuning'. Sorry Dr. Suskind.</p>
+			<p>I am quite amazed that there is this degree of uncertainty in many of the things we take to granted, which
+				as it turns out may just be approximations based on empirical measurements, in everything.</p>
+		</div>
+	</div>
+	<hr>
+	
+	<div class="row ">
+		<div class="col-sm-6">
+			<h2 class="blog-post-title">Analysis Engine Updates</h2>
+			<p class="lead blog-description">Extra Fun Doing Math</p>
+			<p class="blog-post-meta">Wed Mar 26 2017 <a href="http://tdavis.davissoft.com/about.html">td</a></p>
+			
+			<p>I am not much for rigor, two or three of similar things and I usually want the next 2 things.</p>
+			<p>But it was a fun morning reviewing integrals, anti-derivatives, and integration methods.</p>
+			<p></p>
+			<p>The objective is a manifold engine, n-space, and fill in the math between dimensions later.</p>
+			<p>...and it can be used for simpler economic models, oil analysis, healthcare, weather.</p>
+		</div>
+		<div class="col-sm-6">
+			<img src="images\quark.png" class=" img-responsive animated fadeIn">
+		</div>
+	</div>
+	<hr>
+	<div class="row ">
+		<div class="col-sm-6">
+			<h2 class="blog-post-title">Some Random Stuff</h2>
+			<p class="lead blog-description">An Analysis Engine Concept</p>
+			<p class="blog-post-meta">Wed Mar 22 2017 <a href="http://tdavis.davissoft.com/about.html">td</a></p>
+			
+			<p>I have tried the online math engines and 'rule' engines and find them incredibly wanting.</p>
+			
+			<p>Mathematica is an amazing tool, but way too much work for the focused tasks in my analysis projects.
+				Besides I'd rather not code in FORTRAN- or its FORTRAN-lite ever again, so I'm componentizing concepts
+				I need and leaving provisions for external libraries and objects.</p>
+			
+			<p></p>
+			<p>Salient points</p>
+			<ul>
+				<li>data models for source data, probably considering lisp and the autoparser I'm also working on.</li>
+				<li>integration engines for integration</li>
+				<li>multivariable, nestable, transformable</li>
+			</ul>
+			<p>
+		</div>
+		<div class="col-sm-6">
+			<img src="images\energy.png" class=" img-responsive animated fadeIn">
+			<p>
+				<small><em>note: diagram innaccurate and imcomplete</em></small>
+			</p>
+		</div>
+	</div>
+	<hr>
+	
+	<div class="row">
+		<div class="col-sm-8">
+			<h2 class="blog-post-title">Another day, another blog.</h2>
+			<p class="lead blog-description">And here we go again.</p>
+			<p class="blog-post-meta">Sun Oct 27 2016 <a href="http://tdavis.davissoft.com/about.html">td</a></p>
+			
+			<p>This iteration a gulp project from yo with bootstrap bits and pieces and just a few tweaks. If you ever
+				wondered
+				why you came here this iteration isn't going to turn on any lights for you, this is a personal blog and I post
+				about what I'm interested in or what I'm working on -- it's that complicated.</p>
+			<p>My interests are varied and I touch on topics and try to grok as best as I can at the time, given that
+				this is in so many disparate areas this can be confusing even for me, bear with me I do actually do the math
+				on things eventually.</p>
+		</div>
+		<div class="col-sm-4">
+			<img src="images\sprout-sm.png" class=" img-responsive animated fadeIn">
+		</div>
+	</div>
+	
+	<br><br>
+	
+	<div class="footer">
+		<ul class="list-inline">
+			<li><img src="images\icon_32x32.png"></li>
+			<li>
+				<small>All original content ©Copyright Terry Davis 2015-2018</small>
+			</li>
+			<li><a href="http://twitter.com/tdavis0525" target="_blank" title="@tdavis0525" style="text-decoration:none;"><i
+					class="fa fa-twitter"></i></a></li>
+			<li><a href="http://github.com/bronzelegs" target="_blank" title="@bronzelegs"
+			       style="text-decoration:none;"><i class="fa fa-github"></i></a></li>
+			<li><a href="mailto:tdavis0525@gmail.com" title="tdavis" style="text-decoration:none;"><i
+					class="fa fa-envelope"></i></a></li>
+		</ul>
+	</div>
+</div>
+
+
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="/bower_components/modernizr/modernizr.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js scripts/plugins.js -->
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/main.js -->
+<script src="scripts/main.js"></script>
+<!-- endbuild -->
+</body>
+</html>
